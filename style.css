@@ -414,17 +414,6 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .gallery-grid {
-        column-count: 1;   /* EN kolumn på liten mobil */
-    }
-}
-@media (max-width: 600px) {
-    .lightbox-arrow {
-        display: none !important;
-    }
-}
-
 /* MOBIL: två kolumner under 600px */
 @media (max-width: 600px) {
     .gallery-grid {
@@ -439,6 +428,10 @@ footer {
 
     .gallery-title {
         font-size: 11px;
+    }
+
+   .lightbox-arrow {
+        display: none !important;
     }
 }
 
