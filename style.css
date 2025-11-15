@@ -337,18 +337,18 @@ footer {
 
 @media (max-width: 600px) {
     .lightbox-arrow {
-        font-size: 26px;
+        font-size: 30px;
         padding: 6px 8px;
         left: 16px;
         right: 16px;
     }
 
     .lightbox-prev {
-        left: 16px;
+        left: 10px;
     }
 
     .lightbox-next {
-        right: 16px;
+        right: 10px;
     }
 }
 
