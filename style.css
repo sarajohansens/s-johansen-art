@@ -144,7 +144,7 @@ nav a:hover::after {
 }
 
 .btn-primary:hover {
-    background-color: #263548; /* lite ljusare mörkblå */
+    background-color: #263548; 
     transform: scale(1.04);
     border-color: var(--vit-varm);
 }
@@ -172,15 +172,14 @@ nav a:hover::after {
 
 /* Masonry-grid */
 .gallery-grid {
-    column-count: 3;       /* antal kolumner */
-    column-gap: 28px;      /* mellanrum mellan kolumner */
-    padding: 0 15px;       /* gör bilderna visuellt lite mindre */
-}
+    column-count: 3;       
+    column-gap: 28px;      
+    padding: 0 15px;       
 
 /* Varje bildcontainer */
 .gallery-item {
     width: 100%;
-    margin-bottom: 28px;   /* avstånd mellan bilderna vertikalt */
+    margin-bottom: 28px;   
     break-inside: avoid;
     position: relative;
     cursor: pointer;
@@ -192,12 +191,12 @@ nav a:hover::after {
     height: auto;
     display: block;
     border-radius: 6px;
-    transition: transform 0.25s ease; /* gör pop smooth */
+    transition: transform 0.25s ease; 
 }
 
 /* Pop-effekt på hover */
 .gallery-item:hover img {
-    transform: scale(1.04); /* 1.04 = lagom poppigt */
+    transform: scale(1.04); 
 }
 
 
@@ -462,4 +461,17 @@ footer {
    .lightbox-arrow {
         display: none !important;
     }
+}
+
+.sold-badge {
+    display: inline-block;
+    background: #1F2B3A;       /* din mörkblå färg */
+    color: #F7F4EF;            /* varm vit */
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.85;
 }
