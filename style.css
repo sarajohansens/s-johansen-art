@@ -144,7 +144,7 @@ nav a:hover::after {
 }
 
 .btn-primary:hover {
-    background-color: #263548; 
+    background-color: #263548; /* lite ljusare mörkblå */
     transform: scale(1.04);
     border-color: var(--vit-varm);
 }
@@ -172,15 +172,15 @@ nav a:hover::after {
 
 /* Masonry-grid */
 .gallery-grid {
-    column-count: 3;       
-    column-gap: 28px;      
-    padding: 0 15px;  
+    column-count: 3;       /* antal kolumner */
+    column-gap: 28px;      /* mellanrum mellan kolumner */
+    padding: 0 15px;       /* gör bilderna visuellt lite mindre */
 }
 
 /* Varje bildcontainer */
 .gallery-item {
     width: 100%;
-    margin-bottom: 28px;   
+    margin-bottom: 28px;   /* avstånd mellan bilderna vertikalt */
     break-inside: avoid;
     position: relative;
     cursor: pointer;
@@ -192,12 +192,12 @@ nav a:hover::after {
     height: auto;
     display: block;
     border-radius: 6px;
-    transition: transform 0.25s ease; 
+    transition: transform 0.25s ease; /* gör pop smooth */
 }
 
 /* Pop-effekt på hover */
 .gallery-item:hover img {
-    transform: scale(1.04); 
+    transform: scale(1.04); /* 1.04 = lagom poppigt */
 }
 
 
@@ -471,13 +471,14 @@ footer {
     font-size: 11px;
     padding: 2px 6px;
     border-radius: 6px;
+    margin-top: 4px;
     margin-left: 6px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
-   .lb-sold {
+.lb-sold {
     margin-top: 10px;
     background: #1F2B3A;
     color: #F7F4EF;
