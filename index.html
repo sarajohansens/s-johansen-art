@@ -306,30 +306,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const img = item.querySelector("img");
     if (!img) return;
 
-    // sätt bilden
+    // sätt bild
     lightboxImg.src = img.src;
 
+    // hämta titelboxen
     const titleEl = item.querySelector(".gallery-title");
     if (!titleEl || !infoBox) return;
 
-    // försök hitta huvudrad och mått
+    // huvudrad
     const mainEl = titleEl.querySelector(".gallery-main");
-    const sizeEl = titleEl.querySelector(".gallery-size");
+    const mainText = mainEl ? mainEl.textContent : "";
 
-    const mainText = mainEl ? mainEl.textContent : titleEl.textContent;
+    // mått
+    const sizeEl = titleEl.querySelector(".gallery-size");
     const sizeText = sizeEl ? sizeEl.textContent : "";
 
-    // skriv ut i två rader i lightboxen
-    if (sizeText) {
-        infoBox.innerHTML = `
-            <div class="lb-title">${mainText}</div>
-            <div class="lb-size">${sizeText}</div>
-        `;
-    } else {
-        infoBox.innerHTML = `
-            <div class="lb-title">${mainText}</div>
-        `;
+    // SÅLD
+    const soldEl = titleEl.querySelector(".sold-badge");
+    const soldText = soldEl ? soldEl.textContent : "";
+
+    // bygg innehållet till lightboxen
+    let html = `
+        <div class="lb-title">${mainText}</div>
+        <div class="lb-size">${sizeText}</div>
+    `;
+
+    if (soldText) {
+        html += `<div class="lb-sold">${soldText}</div>`;
     }
+
+    infoBox.innerHTML = html;
 }
 
 
