@@ -174,7 +174,8 @@ nav a:hover::after {
 .gallery-grid {
     column-count: 3;       
     column-gap: 28px;      
-    padding: 0 15px;       
+    padding: 0 15px;  
+}
 
 /* Varje bildcontainer */
 .gallery-item {
