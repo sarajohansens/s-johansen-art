@@ -1,15 +1,10 @@
-/* =======================
-   FONTER
-======================= */
+
 @font-face {
     font-family: 'MinFont';
     src: url('Minfont.ttf') format('truetype');
     font-display: swap;
 }
 
-/* =======================
-   FÄRGER
-======================= */
 :root {
     --beige: #F3E6D9;
     --vit-varm: #F7F4EF;
@@ -17,9 +12,7 @@
     --text-mork: #4A4A4A;
 }
 
-/* =======================
-   GRUND
-======================= */
+
 * {
     box-sizing: border-box;
 }
@@ -36,16 +29,14 @@ a {
     color: inherit;
 }
 
-/* Maxbredd */
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* =======================
-   HEADER & NAV
-======================= */
+
 header {
     padding: 30px 0 10px;
     text-align: center;
@@ -88,9 +79,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* =======================
-   HERO
-======================= */
+
 .hero {
     position: relative;
     min-height: 70vh;
@@ -150,9 +139,7 @@ nav a:hover::after {
 }
 
 
-/* =======================
-   GALLERI – MASONRY / ART STYLE (justerad)
-======================= */
+
 
 .gallery-section {
     background-color: var(--vit-varm);
@@ -170,34 +157,34 @@ nav a:hover::after {
     margin-bottom: 35px;
 }
 
-/* Masonry-grid */
+
 .gallery-grid {
-    column-count: 3;       /* antal kolumner */
-    column-gap: 28px;      /* mellanrum mellan kolumner */
-    padding: 0 15px;       /* gör bilderna visuellt lite mindre */
+    column-count: 3;       
+    column-gap: 28px;     
+    padding: 0 15px;      
 }
 
-/* Varje bildcontainer */
+
 .gallery-item {
     width: 100%;
-    margin-bottom: 28px;   /* avstånd mellan bilderna vertikalt */
+    margin-bottom: 28px;   
     break-inside: avoid;
     position: relative;
     cursor: pointer;
 }
 
-/* Bilderna */
+
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 6px;
-    transition: transform 0.25s ease; /* gör pop smooth */
+    transition: transform 0.25s ease; 
 }
 
-/* Pop-effekt på hover */
+
 .gallery-item:hover img {
-    transform: scale(1.04); /* 1.04 = lagom poppigt */
+    transform: scale(1.04); 
 }
 
 
@@ -233,13 +220,11 @@ nav a:hover::after {
 }
 
 
-/* =======================
-   KONTAKT
-======================= */
+
 .contact {
     background-color: var(--morkbla);
     color: var(--vit-varm);
-    padding: 70px 0 45px; /* mindre nedåt */
+    padding: 70px 0 45px; 
 }
 
 .contact-inner {
@@ -252,17 +237,15 @@ nav a:hover::after {
     text-decoration: underline;
 }
 
-/* =======================
-   FOOTER
-======================= */
+
 footer {
     background-color: var(--morkbla);
     color: var(--vit-varm);
     padding: 22px 0 26px;
     text-align: center;
     font-size: 12px;
-    border-top: 1px solid rgba(247, 244, 239, 0.18); /* tunn linje */
-    opacity: 0.9; /* gör footern lugnare än kontaktblocket */
+    border-top: 1px solid rgba(247, 244, 239, 0.18);
+    opacity: 0.9; 
 }
 
 .footer-logo {
@@ -271,16 +254,14 @@ footer {
     margin-bottom: 5px;
 }
 
-/* =======================
-   LIGHTBOX – KLICK FÖR ATT VISA STÖRRE
-======================= */
+
 
 .lightbox {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(3px);
-    display: none;              /* dold från början */
+    display: none;             
     align-items: center;
     justify-content: center;
     z-index: 1000;
@@ -291,7 +272,7 @@ footer {
 }
 
 .lightbox-inner img {
-    max-width: 80vw;  /* lite mindre för både kvadrat & rektangel */
+    max-width: 80vw; 
     max-height: 80vh;
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
@@ -312,7 +293,7 @@ footer {
     }
 }
 
-/* Pilarna i lightboxen */
+
 .lightbox-inner {
     position: relative;
     display: flex;
@@ -320,7 +301,7 @@ footer {
     align-items: center;
 }
 
-/* Pilarna fixas mot skärmen istället för mot bilden */
+
 .lightbox-arrow {
     position: fixed;
     top: 50%;
@@ -333,7 +314,7 @@ footer {
     cursor: pointer;
     opacity: 0.85;
     transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 1100; /* över bilden */
+    z-index: 1100; 
 }
 
 .lightbox-arrow:hover {
@@ -342,11 +323,11 @@ footer {
 }
 
 .lightbox-prev {
-    left: 32px;   /* fast position från vänsterkant */
+    left: 32px;   
 }
 
 .lightbox-next {
-    right: 32px;  /* fast position från högerkant */
+    right: 32px;  
 }
 
 @media (max-width: 600px) {
@@ -405,7 +386,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animation vid bildbyte (höger/vänsterpil) */
+
 .lightbox-inner img.slide-change {
     animation: slide-change 0.25s ease;
 }
@@ -421,7 +402,7 @@ footer {
     }
 }
 
-/* Animation när man bläddrar till nästa/föregående bild */
+
 .lightbox-inner img.slide-change {
     animation: slide-change 0.25s ease;
 }
@@ -439,11 +420,11 @@ footer {
 
 @media (max-width: 768px) {
     .gallery-grid {
-        column-count: 2;   /* två kolumner på mobil */
+        column-count: 2;  
     }
 }
 
-/* MOBIL: två kolumner under 600px */
+
 @media (max-width: 600px) {
     .gallery-grid {
         column-count: 2;
@@ -466,8 +447,8 @@ footer {
 
 .sold-badge {
     display: inline-block;
-    background: #1F2B3A;       /* din mörkblå färg */
-    color: #F7F4EF;            /* varm vit */
+    background: #1F2B3A;       
+    color: #F7F4EF;           
     font-size: 11px;
     padding: 2px 6px;
     border-radius: 6px;
