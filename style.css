@@ -475,3 +475,16 @@ footer {
     text-transform: uppercase;
     opacity: 0.85;
 }
+
+   .lb-sold {
+    margin-top: 10px;
+    background: #1F2B3A;
+    color: #F7F4EF;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
